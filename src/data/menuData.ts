@@ -1,4 +1,5 @@
 import jwejemImg from "@/assets/menu/jwejem.png";
+import fondantImg from "@/assets/menu/fondant.png";
 
 export interface MenuItem {
   name: string;
