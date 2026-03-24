@@ -12,7 +12,9 @@ const Index = () => {
     setActiveCategory(id);
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const navHeight = 56;
+      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   }, []);
 
