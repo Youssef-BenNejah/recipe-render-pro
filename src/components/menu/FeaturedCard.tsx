@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import type { MenuItem } from "@/data/menuData";
 import MenuBadge from "./MenuBadge";
@@ -7,6 +8,8 @@ interface FeaturedCardProps {
 }
 
 const FeaturedCard = ({ item }: FeaturedCardProps) => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <motion.div
       className="menu-card group"
@@ -16,7 +19,7 @@ const FeaturedCard = ({ item }: FeaturedCardProps) => {
       transition={{ duration: 0.5 }}
       whileHover={{ y: -3, borderColor: "rgba(196, 154, 60, 0.5)" }}
     >
-      {item.image && (
+      {item.image && !imgError && (
         <div className="relative overflow-hidden mb-4 h-[180px] md:h-[200px]">
           <motion.img
             src={item.image}
@@ -26,6 +29,7 @@ const FeaturedCard = ({ item }: FeaturedCardProps) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            onError={() => setImgError(true)}
           />
           <div className="absolute inset-0 bg-dark-roast/20 group-hover:bg-dark-roast/10 transition-all duration-300" />
         </div>
