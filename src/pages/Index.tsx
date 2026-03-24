@@ -10,12 +10,16 @@ const Index = () => {
 
   const handleCategoryClick = useCallback((id: string) => {
     setActiveCategory(id);
-    const el = document.getElementById(id);
-    if (el) {
-      const navHeight = 56;
-      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
+    // Use setTimeout to avoid conflict with CategoryNav's scrollIntoView
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        const navBar = document.querySelector('[class*="sticky"]');
+        const navHeight = navBar ? navBar.getBoundingClientRect().height : 56;
+        const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }, 50);
   }, []);
 
   return (
