@@ -223,7 +223,7 @@ export const categories: MenuCategory[] = [
       { name: "Cocktail fruits", nameAr: "كوكتيل فواكه", price: "16 DT", image: "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop" },
       { name: "Cocktail Blue Moon", nameAr: "كوكتيل القمر الأزرق", price: "18 DT", image: "https://images.unsplash.com/photo-1560508179-b2c9a3f8e92b?w=400&h=300&fit=crop" },
       { name: "Cocktail the story", nameAr: "كوكتيل ذا ستوري", price: "25 DT", description: "avocat / pistache / pignons / miel", image: "https://images.unsplash.com/photo-1587223962217-f4fd78abb8e1?w=400&h=300&fit=crop" },
-      { name: "Jwejem", nameAr: "جواجم", price: "18 DT", description: "fruits secs, Miel, Dattes", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" },
+      { name: "Jwejem", nameAr: "جواجم", price: "18 DT", description: "fruits secs, Miel, Dattes", image: jwejemImg },
       { name: "Jwejem Myself", nameAr: "جواجم ماي سيلف", price: "25 DT", description: "Fruits secs, miel, fruits frais, chocolat au choix, pignons, pistache, noix, cajou", descriptionAr: "فواكه جافة، عسل، فواكه طازجة، شوكولاتة حسب الاختيار، صنوبر، فستق، جوز، كاجو", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop", badge: "SIGNATURE" },
     ],
   },
