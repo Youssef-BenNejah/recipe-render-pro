@@ -1,4 +1,5 @@
 import jwejemImg from "@/assets/menu/jwejem.png";
+import fondantImg from "@/assets/menu/fondant.png";
 
 export interface MenuItem {
   name: string;
@@ -362,7 +363,7 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&h=400&fit=crop",
     icon: "🍰",
     featured: [
-      { name: "Fondant", nameAr: "فوندان", price: "12 DT", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop" },
+      { name: "Fondant", nameAr: "فوندان", price: "12 DT", image: fondantImg },
       { name: "Tiramisù", nameAr: "تيراميسو", price: "14 DT", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop" },
       { name: "Cheesecake", nameAr: "تشيز كيك", price: "15 DT", image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400&h=300&fit=crop" },
       { name: "Gâteau russe noisette", nameAr: "كيك روسي بالبندق", price: "15 DT", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" },
