@@ -1,105 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --color-espresso: 15 44% 7%;
+    --color-dark-roast: 20 52% 11%;
+    --color-caramel: 24 41% 39%;
+    --color-gold: 39 54% 50%;
+    --color-gold-light: 42 72% 69%;
+    --color-sand: 30 39% 71%;
+    --color-muted-brown: 22 15% 33%;
+    --color-sage: 122 20% 30%;
+    --color-rose: 8 33% 62%;
+    --bg-page: 36 45% 96%;
+    --bg-surface: 34 33% 93%;
+    --bg-dark: 20 52% 11%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --background: 36 45% 96%;
+    --foreground: 15 44% 7%;
+    --card: 34 33% 93%;
+    --card-foreground: 15 44% 7%;
+    --popover: 34 33% 93%;
+    --popover-foreground: 15 44% 7%;
+    --primary: 39 54% 50%;
+    --primary-foreground: 36 45% 96%;
+    --secondary: 34 33% 93%;
+    --secondary-foreground: 15 44% 7%;
+    --muted: 34 33% 93%;
+    --muted-foreground: 22 15% 33%;
+    --accent: 39 54% 50%;
+    --accent-foreground: 15 44% 7%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+    --border: 24 41% 39% / 0.25;
+    --input: 24 41% 39% / 0.25;
+    --ring: 39 54% 50%;
+    --radius: 0px;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --sidebar-background: 20 52% 11%;
+    --sidebar-foreground: 42 72% 69%;
+    --sidebar-primary: 39 54% 50%;
+    --sidebar-primary-foreground: 36 45% 96%;
+    --sidebar-accent: 20 52% 15%;
+    --sidebar-accent-foreground: 42 72% 69%;
+    --sidebar-border: 24 41% 39% / 0.25;
+    --sidebar-ring: 39 54% 50%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    border-radius: 0 !important;
   }
-
   body {
-    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1A120B;
   }
+}
+
+/* Menu-specific styles */
+.menu-card {
+  background: #F5F0E8;
+  border: 1px solid rgba(139, 94, 60, 0.25);
+  padding: 28px;
+  position: relative;
+}
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid rgba(139, 94, 60, 0.25);
+  z-index: -1;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.item-name {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: #1A120B;
+}
+
+.item-price {
+  font-family: var(--font-serif);
+  color: #8B5E3C;
+  font-size: 16px;
+}
+
+.item-description {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #6B5040;
+  line-height: 1.8;
+}
+
+.item-arabic {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #6B5040;
+  line-height: 1.9;
+  direction: rtl;
+  text-align: right;
+}
+
+.category-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #C49A3C;
+}
+
+.dotted-separator {
+  border-bottom: 1px dotted rgba(139, 94, 60, 0.25);
+}
+
+.dot-leader {
+  flex: 1;
+  border-bottom: 1px dotted rgba(139, 94, 60, 0.25);
+  margin: 0 8px;
+  min-width: 20px;
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.menu-badge {
+  border: 1px solid #C49A3C;
+  color: #C49A3C;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 4px 10px;
+  background: transparent;
+  display: inline-block;
+}
+
+.price-tag-dark {
+  background: #2C1A0E;
+  color: #E8C97A;
+  padding: 6px 14px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.banner-overlay {
+  background: linear-gradient(to bottom, rgba(44, 26, 14, 0.6), rgba(44, 26, 14, 0.8));
+}
+
+/* Sidebar styles */
+.sidebar-item {
+  color: #E8C97A;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: all 0.15s ease;
+}
+.sidebar-item:hover,
+.sidebar-item.active {
+  border-left-color: #C49A3C;
+  background: rgba(196, 154, 60, 0.08);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 94, 60, 0.3);
+}
+
+/* Mobile pill nav */
+.pill-nav {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #2C1A0E;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.pill-nav::-webkit-scrollbar {
+  display: none;
+}
+.pill-item {
+  white-space: nowrap;
+  color: #E8C97A;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border: 1px solid rgba(196, 154, 60, 0.3);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+.pill-item:hover,
+.pill-item.active {
+  background: rgba(196, 154, 60, 0.15);
+  border-color: #C49A3C;
 }
