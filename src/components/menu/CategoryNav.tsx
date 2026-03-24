@@ -86,7 +86,7 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
               color: isActive ? "#E8C97A" : "#D4B896",
             }}
           >
-            <Icon size={14} strokeWidth={1.5} style={{ color: isActive ? "#E8C97A" : "#D4B896" }} />
+            <Icon size={14} strokeWidth={1.5} style={{ color: "#FFFFFF" }} />
             <span
               className="font-sans text-[9px] uppercase tracking-[2px] whitespace-nowrap"
               style={{ fontWeight: 400 }}
