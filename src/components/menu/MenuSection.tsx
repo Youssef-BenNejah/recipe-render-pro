@@ -20,7 +20,7 @@ const MenuSection = ({ category }: MenuSectionProps) => {
       <OrnamentDivider />
 
       {/* Banner Image */}
-      <div className="relative h-[200px] overflow-hidden -mx-4 md:-mx-0">
+      <div className="relative h-[180px] md:h-[200px] overflow-hidden -mx-4">
         <img
           src={category.bannerImage}
           alt={category.title}

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import Header from "@/components/menu/Header";
-import Sidebar from "@/components/menu/Sidebar";
+import CategoryNav from "@/components/menu/CategoryNav";
 import MenuSection from "@/components/menu/MenuSection";
 import Footer from "@/components/menu/Footer";
 import { categories } from "@/data/menuData";
@@ -18,14 +18,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF7F2" }}>
-      <Sidebar
+      <Header />
+
+      <CategoryNav
         activeCategory={activeCategory}
         onCategoryClick={handleCategoryClick}
       />
 
-      <main className="md:ml-[220px] max-w-[980px] mx-auto px-4 md:px-10 pb-8">
-        <Header />
-
+      <main className="max-w-[700px] mx-auto px-4 pb-8">
         {categories.map((category) => (
           <MenuSection key={category.id} category={category} />
         ))}
