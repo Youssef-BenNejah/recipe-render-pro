@@ -80,7 +80,7 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
             key={cat.id}
             data-cat={cat.id}
             onClick={() => onCategoryClick(cat.id)}
-            className="flex items-center gap-1.5 flex-shrink-0 px-3.5 py-2 transition-all duration-200"
+            className="flex items-center gap-1.5 flex-shrink-0 px-3.5 py-3.5 transition-all duration-200"
             style={{
               border: isActive ? "1px solid #C49A3C" : "1px solid rgba(232, 201, 122, 0.15)",
               background: isActive ? "rgba(196, 154, 60, 0.15)" : "transparent",
