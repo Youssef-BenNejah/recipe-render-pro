@@ -62,14 +62,15 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
   return (
     <div
       ref={scrollRef}
-      className="sticky top-0 z-40 flex items-center gap-1 px-3 py-2.5 overflow-x-auto bg-dark-roast/97 backdrop-blur-sm border-b border-gold/15"
+      className="sticky top-0 z-40 flex items-center gap-1.5 px-3 py-3 overflow-x-auto"
       style={{
+        background: "#2C1A0E",
         scrollbarWidth: "none",
         msOverflowStyle: "none",
         WebkitOverflowScrolling: "touch",
+        borderBottom: "1px solid rgba(196, 154, 60, 0.2)",
       }}
     >
-      <style>{`.category-scroll::-webkit-scrollbar { display: none; }`}</style>
       {categories.map((cat) => {
         const Icon = iconMap[cat.id] || Star;
         const isActive = activeCategory === cat.id;
@@ -79,17 +80,16 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
             key={cat.id}
             data-cat={cat.id}
             onClick={() => onCategoryClick(cat.id)}
-            className="flex items-center gap-1.5 flex-shrink-0 px-3 py-2 transition-all duration-200"
+            className="flex items-center gap-1.5 flex-shrink-0 px-3.5 py-2 transition-all duration-200"
             style={{
-              border: isActive ? "1px solid #C49A3C" : "1px solid rgba(196, 154, 60, 0.2)",
-              background: isActive ? "rgba(196, 154, 60, 0.12)" : "transparent",
-              color: isActive ? "#E8C97A" : "#D4B896",
+              border: isActive ? "1px solid #C49A3C" : "1px solid rgba(232, 201, 122, 0.15)",
+              background: isActive ? "rgba(196, 154, 60, 0.15)" : "transparent",
             }}
           >
-            <Icon size={14} strokeWidth={1.5} style={{ color: "#FFFFFF" }} />
+            <Icon size={14} strokeWidth={1.5} color="#FAF7F2" />
             <span
               className="font-sans text-[9px] uppercase tracking-[2px] whitespace-nowrap"
-              style={{ fontWeight: 400 }}
+              style={{ fontWeight: 400, color: "#FAF7F2" }}
             >
               {cat.title}
             </span>
