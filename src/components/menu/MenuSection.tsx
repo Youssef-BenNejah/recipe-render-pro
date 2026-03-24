@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { MenuCategory } from "@/data/menuData";
+import { bannerImages } from "@/data/bannerImages";
 import OrnamentDivider from "./OrnamentDivider";
 import FeaturedCard from "./FeaturedCard";
 import LineItem from "./LineItem";
@@ -10,19 +11,20 @@ interface MenuSectionProps {
 
 const MenuSection = ({ category }: MenuSectionProps) => {
   const isDark = category.darkBg;
+  const banner = bannerImages[category.id] || category.bannerImage;
 
   return (
     <section
       id={category.id}
       className="scroll-mt-14"
-      style={isDark ? { background: "#2C1A0E", margin: "0 -40px", padding: "0 40px" } : undefined}
+      style={isDark ? { background: "#2C1A0E", margin: "0 -16px", padding: "0 16px" } : undefined}
     >
       <OrnamentDivider />
 
       {/* Banner Image */}
       <div className="relative h-[180px] md:h-[200px] overflow-hidden -mx-4">
         <img
-          src={category.bannerImage}
+          src={banner}
           alt={category.title}
           className="w-full h-full object-cover"
           loading="lazy"
