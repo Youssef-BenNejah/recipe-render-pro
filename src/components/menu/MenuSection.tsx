@@ -14,7 +14,7 @@ const MenuSection = ({ category }: MenuSectionProps) => {
   return (
     <section
       id={category.id}
-      className="scroll-mt-4"
+      className="scroll-mt-14"
       style={isDark ? { background: "#2C1A0E", margin: "0 -40px", padding: "0 40px" } : undefined}
     >
       <OrnamentDivider />
