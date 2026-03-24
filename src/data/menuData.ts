@@ -1,3 +1,5 @@
+import jwejemImg from "@/assets/menu/jwejem.png";
+
 export interface MenuItem {
   name: string;
   nameAr?: string;
