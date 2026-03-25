@@ -7,73 +7,38 @@ import {
   Fish, Wind, Apple
 } from "lucide-react";
 
-const iconMap: Record<string, React.ElementType> = {
-  "breakfast": Sun,
-  "healthy": Leaf,
-  "myself": Star,
-  "box-sucree": Gift,
-  "cafe-classique": Coffee,
-  "cafe-nespresso": Cpu,
-  "boissons-froides": GlassWater,
-  "mojitos": Citrus,
-  "jus": CupSoda,
-  "cocktails": Wine,
-  "milkshakes": Milk,
-  "glaces": IceCreamCone,
-  "smoothies": Cherry,
-  "the": Bean,
-  "hot-chocolat": Candy,
-  "frappuccino": Flame,
-  "crepes-gaufres": CakeSlice,
-  "pancakes": Cookie,
-  "douceurs": CakeSlice,
-  "crepes-salees": Utensils,
-  "omlettes": Egg,
-  "fast-food": Sandwich,
-  "pizza": Pizza,
-  "burger": Beef,
-  "salades": Salad,
-  "cote-tunisien": Flag,
-  "pates": UtensilsCrossed,
-  "nos-plats": Utensils,
-  "fruits-de-mer": Fish,
-  "chichas": Wind,
-  "fruits": Apple,
-};
-
-// Emoji icons matching the reference design
-const emojiMap: Record<string, string> = {
-  "breakfast": "☀️",
-  "healthy": "🥗",
-  "myself": "⭐",
-  "box-sucree": "🎁",
-  "cafe-classique": "☕",
-  "cafe-nespresso": "☕",
-  "boissons-froides": "🍹",
-  "mojitos": "🍋",
-  "jus": "🧃",
-  "cocktails": "🍸",
-  "milkshakes": "🥛",
-  "glaces": "🍦",
-  "smoothies": "🍒",
-  "the": "🫖",
-  "hot-chocolat": "🍫",
-  "frappuccino": "🧋",
-  "crepes-gaufres": "🥞",
-  "pancakes": "🥞",
-  "douceurs": "🍰",
-  "crepes-salees": "🧇",
-  "omlettes": "🍳",
-  "fast-food": "🍔",
-  "pizza": "🍕",
-  "burger": "🍔",
-  "salades": "🥗",
-  "cote-tunisien": "🇹🇳",
-  "pates": "🍝",
-  "nos-plats": "🍖",
-  "fruits-de-mer": "🦐",
-  "chichas": "💨",
-  "fruits": "🍎",
+const iconConfig: Record<string, { icon: React.ElementType; color: string }> = {
+  "breakfast": { icon: Sun, color: "#F5A623" },
+  "healthy": { icon: Leaf, color: "#7EC850" },
+  "myself": { icon: Star, color: "#F5D76E" },
+  "box-sucree": { icon: Gift, color: "#E88B8B" },
+  "cafe-classique": { icon: Coffee, color: "#C49A3C" },
+  "cafe-nespresso": { icon: Cpu, color: "#8B7355" },
+  "boissons-froides": { icon: GlassWater, color: "#FF6B8A" },
+  "mojitos": { icon: Citrus, color: "#FFD93D" },
+  "jus": { icon: CupSoda, color: "#FF8C42" },
+  "cocktails": { icon: Wine, color: "#5BCEFA" },
+  "milkshakes": { icon: Milk, color: "#B8D4E3" },
+  "glaces": { icon: IceCreamCone, color: "#FFB7C5" },
+  "smoothies": { icon: Cherry, color: "#E85D75" },
+  "the": { icon: Bean, color: "#E88BA0" },
+  "hot-chocolat": { icon: Candy, color: "#D4845E" },
+  "frappuccino": { icon: Flame, color: "#FF6F61" },
+  "crepes-gaufres": { icon: CakeSlice, color: "#D4A76A" },
+  "pancakes": { icon: Cookie, color: "#F5C542" },
+  "douceurs": { icon: CakeSlice, color: "#FF9A76" },
+  "crepes-salees": { icon: Utensils, color: "#A0C878" },
+  "omlettes": { icon: Egg, color: "#FFE066" },
+  "fast-food": { icon: Sandwich, color: "#F5A623" },
+  "pizza": { icon: Pizza, color: "#FF7043" },
+  "burger": { icon: Beef, color: "#D4845E" },
+  "salades": { icon: Salad, color: "#66BB6A" },
+  "cote-tunisien": { icon: Flag, color: "#E85D5D" },
+  "pates": { icon: UtensilsCrossed, color: "#FFB74D" },
+  "nos-plats": { icon: Utensils, color: "#C49A3C" },
+  "fruits-de-mer": { icon: Fish, color: "#4FC3F7" },
+  "chichas": { icon: Wind, color: "#B39DDB" },
+  "fruits": { icon: Apple, color: "#EF5350" },
 };
 
 interface CategoryNavProps {
@@ -104,7 +69,8 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
         <div className="grid grid-cols-2 gap-3">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
-            const emoji = emojiMap[cat.id] || "⭐";
+            const config = iconConfig[cat.id] || { icon: Star, color: "#C49A3C" };
+            const IconComponent = config.icon;
 
             return (
               <button
@@ -120,7 +86,7 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
                     : "rgba(255,255,255,0.03)",
                 }}
               >
-                <span className="text-2xl">{emoji}</span>
+                <IconComponent size={32} color={config.color} strokeWidth={1.5} />
                 <span
                   className="font-sans text-[11px] uppercase tracking-[1.5px] text-center leading-tight"
                   style={{ fontWeight: 500, color: "#FAF7F2" }}
