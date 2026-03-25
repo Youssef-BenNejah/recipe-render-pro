@@ -72,8 +72,7 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
         <div className="grid grid-cols-2 gap-3">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
-            const config = iconConfig[cat.id] || { icon: Star, color: "#C49A3C" };
-            const IconComponent = config.icon;
+            const IconComponent = iconConfig[cat.id] || Star;
 
             return (
               <button
