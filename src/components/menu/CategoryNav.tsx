@@ -88,7 +88,7 @@ const CategoryNav = ({ activeCategory, onCategoryClick }: CategoryNavProps) => {
                     : "rgba(255,255,255,0.03)",
                 }}
               >
-                <IconComponent size={32} color={config.color} strokeWidth={1.5} />
+                <IconComponent size={32} color={ICON_COLOR} strokeWidth={1.5} />
                 <span
                   className="font-sans text-[11px] uppercase tracking-[1.5px] text-center leading-tight"
                   style={{ fontWeight: 500, color: "#FAF7F2" }}
