@@ -1,10 +1,11 @@
 import { categories } from "@/data/menuData";
 import {
-  Sun, Leaf, Star, Gift, Coffee, Cpu, GlassWater, Citrus,
-  CupSoda, Wine, Milk, IceCreamCone, Cherry, Bean,
-  Candy, Flame, CakeSlice, Cookie, Egg, Sandwich,
-  Pizza, Beef, Salad, Flag, Utensils, UtensilsCrossed,
-  Fish, Wind, Apple
+  Sun, Leaf, Star, Gift, Coffee, GlassWater, Citrus,
+  CupSoda, Martini, Milk, IceCreamCone, Cherry,
+  Candy, CakeSlice, Egg, Sandwich,
+  Pizza, Beef, Salad, Flag, UtensilsCrossed,
+  Fish, Wind, Apple, Croissant, Soup, Drumstick,
+  CircleDot, Grape
 } from "lucide-react";
 
 const iconConfig: Record<string, { icon: React.ElementType; color: string }> = {
@@ -13,21 +14,21 @@ const iconConfig: Record<string, { icon: React.ElementType; color: string }> = {
   "myself": { icon: Star, color: "#F5D76E" },
   "box-sucree": { icon: Gift, color: "#E88B8B" },
   "cafe-classique": { icon: Coffee, color: "#C49A3C" },
-  "cafe-nespresso": { icon: Cpu, color: "#8B7355" },
+  "cafe-nespresso": { icon: Coffee, color: "#8B7355" },
   "boissons-froides": { icon: GlassWater, color: "#FF6B8A" },
   "mojitos": { icon: Citrus, color: "#FFD93D" },
   "jus": { icon: CupSoda, color: "#FF8C42" },
-  "cocktails": { icon: Wine, color: "#5BCEFA" },
+  "cocktails": { icon: Martini, color: "#5BCEFA" },
   "milkshakes": { icon: Milk, color: "#B8D4E3" },
   "glaces": { icon: IceCreamCone, color: "#FFB7C5" },
   "smoothies": { icon: Cherry, color: "#E85D75" },
-  "the": { icon: Bean, color: "#E88BA0" },
+  "the": { icon: Soup, color: "#E88BA0" },
   "hot-chocolat": { icon: Candy, color: "#D4845E" },
-  "frappuccino": { icon: Flame, color: "#FF6F61" },
-  "crepes-gaufres": { icon: CakeSlice, color: "#D4A76A" },
-  "pancakes": { icon: Cookie, color: "#F5C542" },
+  "frappuccino": { icon: CupSoda, color: "#A0826D" },
+  "crepes-gaufres": { icon: Croissant, color: "#D4A76A" },
+  "pancakes": { icon: CircleDot, color: "#F5C542" },
   "douceurs": { icon: CakeSlice, color: "#FF9A76" },
-  "crepes-salees": { icon: Utensils, color: "#A0C878" },
+  "crepes-salees": { icon: Croissant, color: "#A0C878" },
   "omlettes": { icon: Egg, color: "#FFE066" },
   "fast-food": { icon: Sandwich, color: "#F5A623" },
   "pizza": { icon: Pizza, color: "#FF7043" },
@@ -35,10 +36,10 @@ const iconConfig: Record<string, { icon: React.ElementType; color: string }> = {
   "salades": { icon: Salad, color: "#66BB6A" },
   "cote-tunisien": { icon: Flag, color: "#E85D5D" },
   "pates": { icon: UtensilsCrossed, color: "#FFB74D" },
-  "nos-plats": { icon: Utensils, color: "#C49A3C" },
+  "nos-plats": { icon: Drumstick, color: "#C49A3C" },
   "fruits-de-mer": { icon: Fish, color: "#4FC3F7" },
   "chichas": { icon: Wind, color: "#B39DDB" },
-  "fruits": { icon: Apple, color: "#EF5350" },
+  "fruits": { icon: Grape, color: "#EF5350" },
 };
 
 interface CategoryNavProps {
