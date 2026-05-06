@@ -19,6 +19,7 @@ import risottoFruitDeMerImg from "@/assets/menu/risotto-fruit-de-mer.png";
 import patesCrevettesSaumonImg from "@/assets/menu/pates-crevettes-saumon.png";
 import poissonGrilleImg from "@/assets/menu/poisson-grille.png";
 import crevettesPaneesImg from "@/assets/menu/crevettes-panees.png";
+import crevettesGrilleesImg from "@/assets/menu/crevettes-grillees.png";
 
 export interface MenuItem {
   name: string;
@@ -600,7 +601,7 @@ export const categories: MenuCategory[] = [
     featured: [
       { name: "Poisson grillé", nameAr: "سمك مشوي", price: "35 DT", image: poissonGrilleImg },
       { name: "Saumon aux herbes avec sauce citron", nameAr: "سلمون بصلصة الليمون", price: "47 DT", image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop" },
-      { name: "Crevettes grillées", nameAr: "جمبري مشوية", price: "55 DT", image: "https://images.unsplash.com/photo-1565680018093-ebb6e5f12225?w=400&h=300&fit=crop" },
+      { name: "Crevettes grillées", nameAr: "جمبري مشوية", price: "55 DT", image: crevettesGrilleesImg },
       { name: "Crevettes panées", nameAr: "جمبري مقلي", price: "58 DT", image: crevettesPaneesImg },
       { name: "Saumon cajou et crevettes à l'ail", nameAr: "سلمون بالكاجو و الجمبري", price: "60 DT", image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=400&h=300&fit=crop" },
       { name: "Box Fruits de Mer (1 pers.)", nameAr: "بوكس مأكولت بحرية (شخص واحد)", price: "74 DT", description: "Poisson, crevettes, chevrette sautées, seiche, calamar, moules", descriptionAr: "سمك، جمبري، جمبري صغير مقلي، صوبيا، كالمار، محار", image: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=300&fit=crop", badge: "BOX · 1 PERS" },
