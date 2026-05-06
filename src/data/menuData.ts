@@ -1,5 +1,15 @@
 import jwejemImg from "@/assets/menu/jwejem.png";
 import fondantImg from "@/assets/menu/fondant.png";
+import cocktailFruitsImg from "@/assets/menu/cocktail-fruits.png";
+import cocktailBlueMoonImg from "@/assets/menu/cocktail-blue-moon.png";
+import milkshakeClassiqueImg from "@/assets/menu/milkshake-classique.png";
+import milkshakeOreoImg from "@/assets/menu/milkshake-oreo.png";
+import milkshakeKinderImg from "@/assets/menu/milkshake-kinder.png";
+import milkshakeNutellaImg from "@/assets/menu/milkshake-nutella.png";
+import milkshakeFramboiseImg from "@/assets/menu/milkshake-framboise.png";
+import milkshakeMyselfImg from "@/assets/menu/milkshake-myself.png";
+import milkshakeChocolatDubaiImg from "@/assets/menu/milkshake-chocolat-dubai.png";
+import gateauRussePistacheImg from "@/assets/menu/gateau-russe-pistache.png";
 
 export interface MenuItem {
   name: string;
@@ -221,8 +231,8 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=1200&h=400&fit=crop",
     icon: "🍹",
     featured: [
-      { name: "Cocktail fruits", nameAr: "كوكتيل فواكه", price: "16 DT", image: "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400&h=300&fit=crop" },
-      { name: "Cocktail Blue Moon", nameAr: "كوكتيل القمر الأزرق", price: "18 DT", image: "https://images.unsplash.com/photo-1560508179-b2c9a3f8e92b?w=400&h=300&fit=crop" },
+      { name: "Cocktail fruits", nameAr: "كوكتيل فواكه", price: "16 DT", image: cocktailFruitsImg },
+      { name: "Cocktail Blue Moon", nameAr: "كوكتيل القمر الأزرق", price: "18 DT", image: cocktailBlueMoonImg },
       { name: "Cocktail the story", nameAr: "كوكتيل ذا ستوري", price: "25 DT", description: "avocat / pistache / pignons / miel", image: "https://images.unsplash.com/photo-1587223962217-f4fd78abb8e1?w=400&h=300&fit=crop" },
       { name: "Jwejem", nameAr: "جواجم", price: "18 DT", description: "fruits secs, Miel, Dattes", image: jwejemImg },
       { name: "Jwejem Myself", nameAr: "جواجم ماي سيلف", price: "25 DT", description: "Fruits secs, miel, fruits frais, chocolat au choix, pignons, pistache, noix, cajou", descriptionAr: "فواكه جافة، عسل، فواكه طازجة، شوكولاتة حسب الاختيار، صنوبر، فستق، جوز، كاجو", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop", badge: "SIGNATURE" },
@@ -236,13 +246,13 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&h=400&fit=crop",
     icon: "🥤",
     featured: [
-      { name: "Milkshake Classique", nameAr: "ميلك شيك كلاسيك", price: "13 DT", description: "Vanille / chocolat / fraise / pistache", image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&h=300&fit=crop" },
-      { name: "Milkshake Oreo", nameAr: "ميلك شيك أوريو", price: "14 DT", image: "https://images.unsplash.com/photo-1568901839119-631418a3910d?w=400&h=300&fit=crop" },
-      { name: "Milkshake Kinder", nameAr: "ميلك شيك كندر", price: "14 DT", image: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=400&h=300&fit=crop" },
-      { name: "Milkshake Nutella", nameAr: "ميلك شيك نوتيلا", price: "15 DT", image: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400&h=300&fit=crop" },
-      { name: "Milkshake framboise", nameAr: "ميلك شيك بالتوت الأحمر", price: "15 DT", image: "https://images.unsplash.com/photo-1553787499-6f9133860278?w=400&h=300&fit=crop" },
-      { name: "Milkshake Myself", nameAr: "ميلك شيك ماي سلف", price: "17 DT", image: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop", badge: "SIGNATURE" },
-      { name: "Milkshake Chocolat Dubai", nameAr: "ميلك شيك شوكولاتة دبي", price: "20 DT", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop", badge: "PREMIUM" },
+      { name: "Milkshake Classique", nameAr: "ميلك شيك كلاسيك", price: "13 DT", description: "Vanille / chocolat / fraise / pistache", image: milkshakeClassiqueImg },
+      { name: "Milkshake Oreo", nameAr: "ميلك شيك أوريو", price: "14 DT", image: milkshakeOreoImg },
+      { name: "Milkshake Kinder", nameAr: "ميلك شيك كندر", price: "14 DT", image: milkshakeKinderImg },
+      { name: "Milkshake Nutella", nameAr: "ميلك شيك نوتيلا", price: "15 DT", image: milkshakeNutellaImg },
+      { name: "Milkshake framboise", nameAr: "ميلك شيك بالتوت الأحمر", price: "15 DT", image: milkshakeFramboiseImg },
+      { name: "Milkshake Myself", nameAr: "ميلك شيك ماي سلف", price: "17 DT", image: milkshakeMyselfImg, badge: "SIGNATURE" },
+      { name: "Milkshake Chocolat Dubai", nameAr: "ميلك شيك شوكولاتة دبي", price: "20 DT", image: milkshakeChocolatDubaiImg, badge: "PREMIUM" },
     ],
   },
   {
@@ -367,8 +377,8 @@ export const categories: MenuCategory[] = [
       { name: "Tiramisù", nameAr: "تيراميسو", price: "14 DT", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop" },
       { name: "Cheesecake", nameAr: "تشيز كيك", price: "15 DT", image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400&h=300&fit=crop" },
       { name: "Gâteau russe noisette", nameAr: "كيك روسي بالبندق", price: "15 DT", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" },
-      { name: "Gâteau russe pistache", nameAr: "كيك روسي بالفستق", price: "16 DT", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop" },
-      { name: "Morjene", nameAr: "مورجان", price: "16 DT", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop" },
+      { name: "Gâteau russe pistache", nameAr: "كيك روسي بالفستق", price: "16 DT", image: gateauRussePistacheImg },
+      { name: "Morjene", nameAr: "مورجان", price: "16 DT" },
     ],
   },
   {
