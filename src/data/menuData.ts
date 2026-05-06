@@ -10,6 +10,15 @@ import milkshakeFramboiseImg from "@/assets/menu/milkshake-framboise.png";
 import milkshakeMyselfImg from "@/assets/menu/milkshake-myself.png";
 import milkshakeChocolatDubaiImg from "@/assets/menu/milkshake-chocolat-dubai.png";
 import gateauRussePistacheImg from "@/assets/menu/gateau-russe-pistache.png";
+import gateauRusseNoisetteImg from "@/assets/menu/gateau-russe-noisette.png";
+import saladeGrecqueImg from "@/assets/menu/salade-grecque.png";
+import saladeQuinoaImg from "@/assets/menu/salade-quinoa.png";
+import saladeCesarImg from "@/assets/menu/salade-cesar.png";
+import puttanescaImg from "@/assets/menu/puttanesca.png";
+import risottoFruitDeMerImg from "@/assets/menu/risotto-fruit-de-mer.png";
+import patesCrevettesSaumonImg from "@/assets/menu/pates-crevettes-saumon.png";
+import poissonGrilleImg from "@/assets/menu/poisson-grille.png";
+import crevettesGrilleesImg from "@/assets/menu/crevettes-grillees.png";
 
 export interface MenuItem {
   name: string;
@@ -376,7 +385,7 @@ export const categories: MenuCategory[] = [
       { name: "Fondant", nameAr: "فوندان", price: "12 DT", image: fondantImg },
       { name: "Tiramisù", nameAr: "تيراميسو", price: "14 DT", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop" },
       { name: "Cheesecake", nameAr: "تشيز كيك", price: "15 DT", image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400&h=300&fit=crop" },
-      { name: "Gâteau russe noisette", nameAr: "كيك روسي بالبندق", price: "15 DT", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" },
+      { name: "Gâteau russe noisette", nameAr: "كيك روسي بالبندق", price: "15 DT", image: gateauRusseNoisetteImg },
       { name: "Gâteau russe pistache", nameAr: "كيك روسي بالفستق", price: "16 DT", image: gateauRussePistacheImg },
       { name: "Morjene", nameAr: "مورجان", price: "16 DT" },
     ],
@@ -488,9 +497,9 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=400&fit=crop",
     icon: "🥗",
     featured: [
-      { name: "Salade grecque", nameAr: "سلطة يونانية", price: "17 DT", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop" },
-      { name: "Salade quinoa", nameAr: "سلطة الكينوا", price: "19 DT", image: "https://images.unsplash.com/photo-1505576399279-0d00149ceb57?w=400&h=300&fit=crop" },
-      { name: "Salade César", nameAr: "سلطة سيزار", price: "20 DT", image: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=300&fit=crop" },
+      { name: "Salade grecque", nameAr: "سلطة يونانية", price: "17 DT", image: saladeGrecqueImg },
+      { name: "Salade quinoa", nameAr: "سلطة الكينوا", price: "19 DT", image: saladeQuinoaImg },
+      { name: "Salade César", nameAr: "سلطة سيزار", price: "20 DT", image: saladeCesarImg },
       { name: "Salade gourmande", nameAr: "سلطة شهية", price: "20 DT", image: "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&h=300&fit=crop" },
       { name: "Salade recipe", nameAr: "سلطة ريسيب", price: "24 DT", image: "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?w=400&h=300&fit=crop" },
       { name: "Salade pomme Honeycrisp et brocoli", nameAr: "سلطة التفاح والعسل مع البروكلي", price: "25 DT", image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=300&fit=crop" },
@@ -536,15 +545,15 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1200&h=400&fit=crop",
     icon: "🍝",
     featured: [
-      { name: "Puttanesca", nameAr: "بوتانيسكا", price: "23 DT", description: "sauce tomate, olives, ail, thon", descriptionAr: "صلصة طماطم، زيتون، ثوم، تن", image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" },
+      { name: "Puttanesca", nameAr: "بوتانيسكا", price: "23 DT", description: "sauce tomate, olives, ail, thon", descriptionAr: "صلصة طماطم، زيتون، ثوم، تن", image: puttanescaImg },
       { name: "Bolognaise", nameAr: "بولونيز", price: "28 DT", description: "sauce tomate au boeuf hachée", descriptionAr: "صلصة طماطم بلحم مفروم", image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop" },
       { name: "Pasta al gorgonzola e noci", nameAr: "باستا بالجبن غورغونزولا والجوز", price: "28 DT", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&h=300&fit=crop" },
       { name: "Lasagne", nameAr: "لازانيا", price: "28 DT", image: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop" },
       { name: "Alfredo", nameAr: "ألفريدو", price: "29 DT", description: "champignons, fromage, poulet", descriptionAr: "فطر، جبن، دجاج", image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=400&h=300&fit=crop" },
       { name: "Ravioli 4 fromages", nameAr: "رافيولي بأربعة أنواع من الجبن", price: "29 DT", image: "https://images.unsplash.com/photo-1587740908075-9e245070dfaa?w=400&h=300&fit=crop" },
       { name: "Spaghetti fruits de mer", nameAr: "سباغيتي بفواكه البحر", price: "36 DT", image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop", badge: "PREMIUM" },
-      { name: "Risotto fruit de mer", nameAr: "ريزوتو بفواكه البحر", price: "42 DT", image: "https://images.unsplash.com/photo-1633436375153-d7045cb93e38?w=400&h=300&fit=crop", badge: "PREMIUM" },
-      { name: "Pâtes crevettes & saumon", nameAr: "باستا بالروبيان والسلمون", price: "49 DT", image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop", badge: "PREMIUM" },
+      { name: "Risotto fruit de mer", nameAr: "ريزوتو بفواكه البحر", price: "42 DT", image: risottoFruitDeMerImg, badge: "PREMIUM" },
+      { name: "Pâtes crevettes & saumon", nameAr: "باستا بالروبيان والسلمون", price: "49 DT", image: patesCrevettesSaumonImg, badge: "PREMIUM" },
     ],
   },
   {
@@ -589,9 +598,9 @@ export const categories: MenuCategory[] = [
     bannerImage: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=1200&h=400&fit=crop",
     icon: "🦐",
     featured: [
-      { name: "Poisson grillé", nameAr: "سمك مشوي", price: "35 DT", image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=400&h=300&fit=crop" },
+      { name: "Poisson grillé", nameAr: "سمك مشوي", price: "35 DT", image: poissonGrilleImg },
       { name: "Saumon aux herbes avec sauce citron", nameAr: "سلمون بصلصة الليمون", price: "47 DT", image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop" },
-      { name: "Crevettes grillées", nameAr: "جمبري مشوية", price: "55 DT", image: "https://images.unsplash.com/photo-1565680018093-ebb6e5f12225?w=400&h=300&fit=crop" },
+      { name: "Crevettes grillées", nameAr: "جمبري مشوية", price: "55 DT", image: crevettesGrilleesImg },
       { name: "Crevettes panées", nameAr: "جمبري مقلي", price: "58 DT", image: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&h=300&fit=crop" },
       { name: "Saumon cajou et crevettes à l'ail", nameAr: "سلمون بالكاجو و الجمبري", price: "60 DT", image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=400&h=300&fit=crop" },
       { name: "Box Fruits de Mer (1 pers.)", nameAr: "بوكس مأكولت بحرية (شخص واحد)", price: "74 DT", description: "Poisson, crevettes, chevrette sautées, seiche, calamar, moules", descriptionAr: "سمك، جمبري، جمبري صغير مقلي، صوبيا، كالمار، محار", image: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=300&fit=crop", badge: "BOX · 1 PERS" },
